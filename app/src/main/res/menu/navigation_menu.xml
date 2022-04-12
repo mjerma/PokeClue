@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/general">
+        <menu>
+            <group android:id="@+id/navDrawerGroupData">
+                <item android:id="@+id/navItemPokemon"
+                    android:icon="@drawable/pokemon"
+                    android:title="@string/pokemon" />
+                <item android:id="@+id/navItemItems"
+                    android:icon="@drawable/items"
+                    android:title="@string/items" />
+                <item android:id="@+id/navItemFavorites"
+                    android:icon="@drawable/favorite_icon"
+                    android:title="@string/favorites" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/application_info">
+        <menu>
+            <group android:id="@+id/navDrawerGroupAbout">
+                <item android:id="@+id/navItemAbout"
+                    android:icon="@drawable/info"
+                    android:title="@string/about" />
+            </group>
+        </menu>
+    </item>
+</menu>

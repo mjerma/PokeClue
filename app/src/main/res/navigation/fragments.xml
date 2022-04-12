@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/navItemPokemon"
+    android:id="@+id/fragments">
+
+    <fragment
+        android:id="@+id/navItemPokemon"
+        android:name="hr.algebra.pokeclue.ui.PokemonFragment"
+        android:label="@string/pokemon"
+        tools:layout="@layout/fragment_pokemon" />
+
+    <fragment
+        android:id="@+id/navItemItems"
+        android:name="hr.algebra.pokeclue.ui.ItemsFragment"
+        android:label="@string/pokemon"
+        tools:layout="@layout/fragment_pokemon" />
+
+    <fragment
+        android:id="@+id/navItemFavorites"
+        android:name="hr.algebra.pokeclue.ui.FavoritesFragment"
+        android:label="@string/favorites"
+        tools:layout="@layout/fragment_favorites" />
+
+    <fragment
+        android:id="@+id/navItemAbout"
+        android:name="hr.algebra.pokeclue.ui.AboutFragment"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_about" />
+
+</navigation>

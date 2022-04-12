@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/LayoutBackground"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivPokemon"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/charizard" />
+
+        <TextView
+            android:id="@+id/tvPokemonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivPokemon"
+            android:layout_gravity="center_horizontal"
+            style="@style/TextColor"
+            android:fontFamily="@font/circularstd_medium"
+            android:textSize="32dp"
+            tools:text="Charizard" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPokemonName"
+            android:layout_gravity="center_horizontal"
+            style="@style/TextColor"
+            android:fontFamily="@font/circularstd_medium"
+            android:textSize="15dp"
+            tools:text="FIRE" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/TextColor"
+                    android:text="HP"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvHP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    style="@style/TextColor"
+                    android:textSize="16dp"
+                    tools:text="55" />
+
+                <ProgressBar
+                    android:id="@+id/pbHP"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="4"
+                    android:indeterminate="false"
+                    android:max="255"
+                    android:progress="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/TextColor"
+                    android:text="Attack"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvAttack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    style="@style/TextColor"
+                    android:textSize="16dp"
+                    tools:text="55" />
+
+                <ProgressBar
+                    android:id="@+id/pbAttack"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="4"
+                    android:indeterminate="false"
+                    android:max="190"
+                    android:progress="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/TextColor"
+                    android:text="Defense"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvDefense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    style="@style/TextColor"
+                    android:textSize="16dp"
+                    tools:text="55" />
+
+                <ProgressBar
+                    android:id="@+id/pbDefense"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="4"
+                    android:indeterminate="false"
+                    android:max="230"
+                    android:progress="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/TextColor"
+                    android:text="Sp. Atk"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvSpAtk"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    style="@style/TextColor"
+                    android:textSize="16dp"
+                    tools:text="55" />
+
+                <ProgressBar
+                    android:id="@+id/pbSpAtk"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="4"
+                    android:indeterminate="false"
+                    android:max="194"
+                    android:progress="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/TextColor"
+                    android:text="Sp. Def"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvSpDef"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    style="@style/TextColor"
+                    android:textSize="16dp"
+                    tools:text="55" />
+
+                <ProgressBar
+                    android:id="@+id/pbSpDef"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="4"
+                    android:indeterminate="false"
+                    android:max="230"
+                    android:progress="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/TextColor"
+                    android:text="Speed"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvSpeed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    style="@style/TextColor"
+                    android:textSize="16dp"
+                    tools:text="55" />
+
+                <ProgressBar
+                    android:id="@+id/pbSpeed"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="4"
+                    android:indeterminate="false"
+                    android:max="180"
+                    android:progress="0" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text="More:"
+            style="@style/TextColor"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDetails"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Details" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>

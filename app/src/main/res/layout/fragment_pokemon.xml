@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PokemonFragment"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/pokemon_search_margin_start"
+        android:layout_marginEnd="@dimen/pokemon_search_margin_end"
+        android:layout_marginTop="@dimen/pokemon_search_margin_top"
+        android:layout_marginBottom="@dimen/pokemon_search_margin_bottom"
+        android:background="@drawable/background_search_bar"
+        style="@style/SearchView"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/svPokemon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textCursorDrawable="@null"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@null"
+            android:defaultFocusHighlightEnabled="false"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPokemon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchLayout"
+        style="@style/LayoutBackground"
+        android:overScrollMode="never"
+        android:nestedScrollingEnabled="false"
+        android:paddingStart="@dimen/rv_pokemon_padding_start"
+        android:paddingEnd="@dimen/rv_pokemon_padding_end"
+        app:layoutManager="GridLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:itemCount="20"
+        tools:listitem="@layout/pokemon_list_item"
+        tools:spanCount="2" />
+
+</RelativeLayout>

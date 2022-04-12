@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hr.algebra.pokeclue">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PokeClue">
+
+        <activity
+            android:name="hr.algebra.pokeclue.SplashScreenActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PokeClue.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="hr.algebra.pokeclue.HostActivity" />
+
+        <service
+            android:name="hr.algebra.pokeclue.PokeClueService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name="hr.algebra.pokeclue.PokeClueReceiver"
+            android:enabled="true"
+            android:exported="false"/>
+
+        <provider
+            android:name="hr.algebra.pokeclue.PokeClueProvider"
+            android:authorities="hr.algebra.pokeclue.api.provider"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity android:name=".PokemonPagerActivity"></activity>
+
+        <activity android:name=".WebViewActivity"></activity>
+
+    </application>
+
+</manifest>

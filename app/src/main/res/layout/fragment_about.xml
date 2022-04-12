@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.AboutFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/iv_about_placeholder"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/pokeclue" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/about_linear_layout_height"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="@dimen/tv_about_padding"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="match_parent"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:text="@string/made_by" />
+
+        <TextView
+            android:padding="@dimen/tv_about_content_padding"
+            android:layout_width="0dp"
+            android:layout_weight="0.28"
+            android:layout_height="match_parent"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:text="@string/mihael_majer" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/about_linear_layout_height"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="@dimen/tv_about_padding"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="match_parent"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:text="@string/toggle_dark_mode" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/themeSwitch"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_marginEnd="@dimen/about_switch_margin_end"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/about_linear_layout_height"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="@dimen/tv_about_padding"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="match_parent"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:text="@string/app_version" />
+
+        <TextView
+            android:id="@+id/tvAppVersion"
+            android:padding="@dimen/tv_about_content_padding"
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:layout_height="match_parent"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:text="1.0.0"/>
+    </LinearLayout>
+
+</LinearLayout>
